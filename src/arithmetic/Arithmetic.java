@@ -6,6 +6,7 @@
 package arithmetic;
 
 
+import arithmetic.ArithmeticBase.Operator;
 import java.util.Scanner;
 
 /** This class calls the method to perform 
@@ -22,10 +23,14 @@ public class Arithmetic
      */
     public static void main(String[] args) 
     {
+       Operator plus = Operator.PLUS;
+       Operator minus = Operator.MINUS;
+       Operator times = Operator.TIMES;
+       Operator divide = Operator.DIVIDE;
        
-        ArithmeticBase r= new ArithmeticBase();
-        double result = r.calculate(1,2);
-        System.out.println("result :" +result); 
+       ArithmeticBase r= new ArithmeticBase();
+       double result = r.calculate(1,times,2);
+       System.out.println("result :" +result); 
     
     }
 
